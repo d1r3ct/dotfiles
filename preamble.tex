@@ -1,0 +1,112 @@
+% Declare that this style file requires at least LaTeX version 2e.
+\NeedsTeXFormat{LaTeX2e}
+
+% Provide the name of your page, the date it was last updated, and a comment about what it's used for
+\ProvidesPackage{mypreamble}[Basic latex styles for documents]
+
+\providecommand{\pgfsyspdfmark}[3]{}
+\documentclass[12pt, a4paper]{article}
+\usepackage{csquotes}
+\usepackage[fleqn]{amsmath}
+\usepackage{soul}
+\usepackage[parfill]{parskip}
+\usepackage{textcomp}
+\usepackage{url}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage[normalem]{ulem}
+\usepackage{tikz}
+\usepackage{cancel}
+\usetikzlibrary{mindmap}
+
+% Hide page number when page is empty
+\usepackage{emptypage}
+\usepackage{subcaption}
+\usepackage{multicol}
+
+% Decrease vertical margin on the page, for better readability on page break.
+\usepackage{geometry}
+\geometry{
+a4paper,
+total={170mm,257mm},
+left=.9in,
+top=0.8in,
+bottom=0.8in,
+right=.9in,
+}
+\setlength{\columnsep}{.5in}
+
+% Math stuff
+\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
+
+% Settings for code blocks.
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{comment}{HTML}{8E908C}
+\definecolor{red}{HTML}{C82829}
+\definecolor{orange}{HTML}{F5871F}
+\definecolor{yellow}{HTML}{EAB700}
+\definecolor{green}{HTML}{718C00}
+\definecolor{blue}{HTML}{4271AE}
+\definecolor{linkblue}{HTML}{0000FF}
+\definecolor{purple}{HTML}{8959A8}
+\definecolor{shadecolor}{HTML}{EEEEEE}
+
+\lstdefinestyle{cstyle}
+{
+	language=C,
+	showspaces=false,
+	showtabs=false,
+	breaklines=true,
+	showstringspaces=false,
+	breakatwhitespace=true,
+	tabsize=4,
+	commentstyle=\color{comment}\itshape,
+	stringstyle=\color{red}\bfseries,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{purple}\bfseries,
+	otherkeywords = {;,<<,>>,++,<,>,\#include,\#define},
+	morekeywords = [2]{;,\#include,\#define},
+	keywordstyle = [2]{\color{blue}\bfseries},
+	morekeywords = [3]{<<, >>},
+	keywordstyle = [3]{\color{yellow}},
+	morekeywords = [4]{++},
+	keywordstyle = [4]{\color{teal}},
+	morekeywords = [5]{<,>},
+    basicstyle=\ttfamily,
+    columns=flexible,
+    aboveskip=20pt,
+    belowskip=20pt,
+    framexrightmargin=.5em,
+    framexleftmargin=.5em,
+    frame=bt,
+    framextopmargin=5pt,
+    framexbottommargin=5pt,
+    backgroundcolor=\color{shadecolor},
+    rulecolor=\color{shadecolor},
+}
+\lstset{language=C,style=cstyle}
+\lstdefinelanguage{none}{
+  identifierstyle=
+}
+\lstMakeShortInline[columns=fixed, language=none]|
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, menucolor=green, linkcolor=linkblue}
+
+% Allow overriding the `fleqn` environment and centering the equations.
+\usepackage{environ}
+\makeatletter
+\NewEnviron{nofleqn}[1]{\@fleqnfalse\begin{#1}\BODY\end{#1}}
+\makeatother
+
+\endinput
