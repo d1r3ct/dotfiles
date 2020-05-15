@@ -7,7 +7,7 @@
 \providecommand{\pgfsyspdfmark}[3]{}
 \documentclass[12pt, a4paper]{article}
 \usepackage{csquotes}
-\usepackage[fleqn]{amsmath}
+\usepackage{amsmath}
 \usepackage{soul}
 \usepackage[parfill]{parskip}
 \usepackage{textcomp}
@@ -103,10 +103,12 @@ right=.9in,
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, menucolor=green, linkcolor=linkblue}
 
-% Allow overriding the `fleqn` environment and centering the equations.
-\usepackage{environ}
-\makeatletter
-\NewEnviron{nofleqn}[1]{\@fleqnfalse\begin{#1}\BODY\end{#1}}
-\makeatother
+
+% Math stuff
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newtheorem*{remark}{Remark}
 
 \endinput
