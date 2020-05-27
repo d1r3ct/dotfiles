@@ -106,7 +106,7 @@ set number relativenumber
 " Enable syntax highlighting
 syntax enable 
 
-set background=light
+set background=dark
 colorscheme solarized8_high
 
 " Enable 256 colors palette in Gnome Terminal

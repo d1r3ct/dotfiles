@@ -7,7 +7,6 @@
 \providecommand{\pgfsyspdfmark}[3]{}
 \documentclass[12pt, a4paper]{article}
 \usepackage{csquotes}
-\usepackage{amsmath}
 \usepackage{soul}
 \usepackage[parfill]{parskip}
 \usepackage{textcomp}
@@ -16,7 +15,7 @@
 \graphicspath{ {./images/} }
 \usepackage{float}
 \usepackage{booktabs}
-\usepackage{enumitem}
+\usepackage[shortlabels]{enumitem}
 \usepackage[normalem]{ulem}
 \usepackage{tikz}
 \usepackage{cancel}
@@ -106,12 +105,18 @@ right=.9in,
 
 % Math stuff
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{corollary}{Corollary}[theorem]
-\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[proposition]{Lemma}
+\newtheorem{corollary}[proposition]{Corollary}
 
 \newtheorem*{remark}{Remark}
 
 \theoremstyle{definition}
 \newtheorem{example}{Example}[section]
+\newtheorem{exercise}{Exercise}[section]
+\newtheorem{definition}[proposition]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{solution}{Solution}[example]
 
 \endinput
