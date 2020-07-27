@@ -108,6 +108,7 @@ syntax enable
 
 set background=dark
 colorscheme solarized8_high
+" colorscheme solarized8
 
 " Enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
@@ -239,6 +240,9 @@ set statusline +=%1*%4v\ %*             "virtual column number
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Redefine the key for sql completion (it's on Ctrl+C by default).
+let g:ftplugin_sql_omni_key = '<Leader>sql'
+
 map <leader>q :q<cr>
 
 "  Snippets
