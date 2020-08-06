@@ -106,6 +106,8 @@ set number relativenumber
 " Enable syntax highlighting
 syntax enable 
 
+set spell
+
 set background=dark
 colorscheme solarized8_high
 " colorscheme solarized8
