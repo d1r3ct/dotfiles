@@ -106,10 +106,9 @@ set number relativenumber
 " Enable syntax highlighting
 syntax enable 
 
-set spell
-
 set background=dark
-colorscheme solarized8_high
+colorscheme monokai
+" colorscheme solarized8_high
 " colorscheme solarized8
 
 " Enable 256 colors palette in Gnome Terminal
@@ -155,6 +154,7 @@ autocmd FileType text,rst,markdown,sh,sli,txt setl textwidth=79
 
 set ai "Auto indent
 set cindent
+set breakindent
 set nowrap
 
 """"""""""""""""""""""""""""""

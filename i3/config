@@ -35,7 +35,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id xrandr --output LVDS1 --off --auto
 
 # Background picture.
-exec --no-startup-id feh --bg-scale ~/Pictures/zen-flower.jpg
+exec --no-startup-id feh --bg-scale /home/d1r3ct/Pictures/wallpapers/pexels-eberhard-grossgasteiger-2098428.jpg
+
 
 # For switching keyboard layout.
 exec_always "setxkbmap -layout us,ru -option 'grp:alt_shift_toggle'"
